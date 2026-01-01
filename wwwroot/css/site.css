@@ -40,8 +40,7 @@ body {
 
 h1 {
     font-family: Poppins;
-    font-size;
-    2000px;
+    font-size:250px;
 }
 
 .parent {
@@ -84,7 +83,7 @@ h1 {
 }
 
 .text_center {
-    margin-top: 15rem;
+    margin-top: 8rem;
     justify-content: center;
     align-items: center;
 }
