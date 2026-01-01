@@ -13,16 +13,14 @@ html {
 }
 
 html {
-    position: relative;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
-    margin-bottom: 60px;
-    margin: 0;
-    padding: 0;
+  margin-bottom: 60px;
+  color:red;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -36,7 +34,6 @@ body {
 
 h1{
     font-family:Poppins;
-    font-size; 2000px;
 }
 
 .parent {
@@ -62,42 +59,5 @@ h1{
     margin: auto;
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 4px 12px  #00000022;
+    box-shadow: 0 4px 12px  #18003579;
 }
-
-
-.blur-navbar {
-    backdrop-filter: blur(10px);-
-    webkit-backdrop-filter: blur(10px); /* safari */
-    background: rgba(255, 255, 255, 0.2);
-}
-.blur-footer {
-    backdrop-filter: blur(10%);
-    webkit-backdrop-filter: blur(10px); /* safari */
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.text_center{
-    margin-top: 15rem;
-    justify-content: center;
-    align-items: center;
-}
-
-#login-form, #register-form {
-    transition: 0.3s all;
-}
-
-.register-btn {
-    width: 20%;
-    color: #000;
-    font-weight: bold;
-    padding: 0.75rem 2rem;
-    border-radius: 50px; 
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 20px 20px rgba(0,0,0,1);
-}
-
-.register-btn:hover {
-     transform: translateY(-3px);
-     box-shadow: 0 10px 20px rgba(0,0,0,0.4);
- }
