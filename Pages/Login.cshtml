@@ -10,21 +10,26 @@
         <!-- Register Form (default visible) -->
         <div id="register-form">
             <h2>Register</h2>
-            <form>
-                <input type="text" placeholder="Username" class="form-control mb-2">
-                <input type="email" placeholder="Email" class="form-control mb-2">
-                <input type="password" placeholder="Password" class="form-control mb-2">
+            <form method="post" asp-page-handler="Register">
+                <input asp-for="Register.UserName" class="form-control mb-2" placeholder="Username" />
+                <input asp-for="Register.Email" class="form-control mb-2" placeholder="Email" />
+                <input asp-for="Register.Password" type="password" class="form-control mb-2" placeholder="Password" />
+
+                <span class="text-danger">@Model.RegisterError</span>
                 <button type="submit" class="btn btn-success w-100">Register</button>
             </form>
+
             <p class="mt-2">Already have an account? <a href="#" id="show-login">Login</a></p>
         </div>
 
         <!-- Login Form (hidden by default) -->
         <div id="login-form" style="display: none;">
             <h2>Login</h2>
-            <form>
-                <input type="email" placeholder="Email" class="form-control mb-2">
-                <input type="password" placeholder="Password" class="form-control mb-2">
+            <form method="post" asp-page-handler="Login">
+                <input asp-for="Login.Email" class="form-control mb-2" placeholder="Email" />
+                <input asp-for="Login.Password" type="password" class="form-control mb-2" placeholder="Password" />
+
+                <span class="text-danger">@Model.LoginError</span>
                 <button type="submit" class="btn btn-primary w-100">Login</button>
             </form>
             <p class="mt-2">Don't have an account? <a href="#" id="show-register">Register</a></p>

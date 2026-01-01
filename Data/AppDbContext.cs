@@ -19,5 +19,8 @@ public class AppDbContext : DbContext
             .WithMany(u => u.Reports) 
             .HasForeignKey(r => r.UserAccountId)
             .OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity<UserAccount>()
+    .HasIndex(u => u.Email)
+    .IsUnique();
     }
 }

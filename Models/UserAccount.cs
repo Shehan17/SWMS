@@ -16,7 +16,7 @@ namespace SWMS.Models
         [Required, MaxLength(255)]
         public required string PasswordHash { get; set; }
 
-        [Required, MaxLength(100)]
+        [MaxLength(100)]
         public required string UserName { get; set; }
 
         public ICollection<Report> Reports { get; set; } = new List<Report>();
