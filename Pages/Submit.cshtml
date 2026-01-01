@@ -1,0 +1,52 @@
+﻿@page
+@model SWMS.Pages.SubmitModel
+@{
+    ViewData["Title"] = "Submit Trash";
+}
+
+<div class="text-center">
+    <h2 class="text_center fw-bold text-uppercase text-bg-dark text-white">Submit Your Trash</h2>
+</div>
+
+<div class="row mt-5 align-items-center">
+    <label for="location" class="col-1 col-form-label fw-bold">
+        Location:
+    </label>
+
+    <div class="col-10 shadow-sm submit_field">
+        <input type="text" id="location" class="form-control">
+    </div>
+</div>
+
+<div class="row mt-3 align-items-center">
+    <label for="wasteType" class="col-auto col-form-label fw-bold">
+        Waste Type:
+    </label>
+
+    <div class="col-10 shadow-sm submit_field">
+        <select id="wasteType" class="form-select">
+            <option selected disabled>Select</option>
+            <option>Plastic</option>
+            <option>Organic</option>
+            <option>Glass</option>
+        </select>
+    </div>
+</div>
+
+<div class="row mt-3 align-items-center">
+    <label for="description" class="col-auto col-form-label fw-bold">
+        Description:
+    </label>
+
+    <div class="col-10 shadow-sm submit_field ">
+        <textarea id="description" class="form-control" rows="4" placeholder="Add a description"></textarea>
+    </div>
+</div>
+
+<div class="text-center">
+    <button type="submit" class="btn submit-btn w-50 mt-3">
+       Submit
+    </button>
+</div>
+
+

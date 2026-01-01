@@ -1,0 +1,50 @@
+﻿@page
+@model SWMS.Pages.AdminpageModel
+
+<html>
+    <head>
+        <title>
+        
+        Admin Panel-Waste management Sytem Admin Panel
+        
+        </title>
+        </head>
+<body>
+    <div id="notificationBoard">
+        <h5> Ongoing Notifications</h5>
+
+        <div class="notification-left">
+            <p><b> Status</b></p>
+            <p class="status"> pending</p>
+        </div>
+
+
+
+        <div class="notification-right">
+                <p>
+                    <b>location: </b><span class="location">Colombo 07</span>
+                </p>
+                <p>
+                    <b>Waste Type: </b> <span class="Waste-type">Plastic </span>
+                </p>
+                <p>
+                    <b>Reported Time: </b> <span class="Time">10.30AM </span>
+                </p>
+                <p>
+                    <b>Reported By: </b> <span class="reporter"> Mr.Perera </span>
+                </p>
+        <select onchange="changeStatus(this)">
+            <option value="pending"> Pending</option>
+            <option value="working">Working</option>
+            <option value="Done">Done</option>
+        </select>
+        <button onclick="removeNotification(this)"> Complete</button>
+        </div>
+
+    </div>
+    </div>
+
+
+    <script></script>
+</body>
+</html>
