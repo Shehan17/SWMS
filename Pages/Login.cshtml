@@ -5,23 +5,48 @@
 }
 <div class="parent">
 
-    <div class="d-flex justify-content-center align-items-center  ">
-        <div class="login-container">
-            <form method="post">
-                <h2>Login</h2>
+    <div class="auth-container d-flex justify-content-center align-items-center login-container">
 
-                <div class="form-group mt-2 mb-2">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="Username" placeholder="Username" class="form-control" required />
-                </div>
-
-                <div class="form-group mt-2 mb-2">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="Password" placeholder="Password" class="form-control" required />
-                </div>
-
-                <button type="submit" class="btn btn-primary mt-2">Login</button>
+        <!-- Register Form (default visible) -->
+        <div id="register-form">
+            <h2>Register</h2>
+            <form>
+                <input type="text" placeholder="Username" class="form-control mb-2">
+                <input type="email" placeholder="Email" class="form-control mb-2">
+                <input type="password" placeholder="Password" class="form-control mb-2">
+                <button type="submit" class="btn btn-success w-100">Register</button>
             </form>
+            <p class="mt-2">Already have an account? <a href="#" id="show-login">Login</a></p>
         </div>
+
+        <!-- Login Form (hidden by default) -->
+        <div id="login-form" style="display: none;">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" class="form-control mb-2">
+                <input type="password" placeholder="Password" class="form-control mb-2">
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+            <p class="mt-2">Don't have an account? <a href="#" id="show-register">Register</a></p>
+        </div>
+
     </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        document.getElementById('show-login').addEventListener('click', (e) => {
+          e.preventDefault();
+          registerForm.style.display = 'none';
+          loginForm.style.display = 'block';
+        });
+
+        document.getElementById('show-register').addEventListener('click', (e) => {
+          e.preventDefault();
+          loginForm.style.display = 'none';
+          registerForm.style.display = 'block';
+        });
+    </script>
+
 </div>
