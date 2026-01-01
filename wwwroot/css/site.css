@@ -123,7 +123,7 @@ h1 {
 
 .submit-btn {
     background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
-    color: #fff;
+    color: #ddd;
     border: 1px solid #2a2a2a;
     border-radius: 12px;
     padding: 12px;
@@ -136,6 +136,9 @@ h1 {
         background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
         box-shadow: 0 8px 20px rgba(0,0,0,0.6);
         transform: translateY(-2px);
+        color: #ffffff; /* brighter text */
+        letter-spacing: 1px; /* subtle pop */
+        text-shadow: 0 0 8px rgba(255,255,255,0.4);
     }
 
     .submit-btn:active {
