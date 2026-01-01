@@ -49,4 +49,10 @@ button.accept-policy {
 
 nav{
     font-family: Poppins;
+    border: none;
+
+}
+
+.navbar{
+    margin-bottom: 0;
 }
