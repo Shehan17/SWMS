@@ -1,13 +1,24 @@
-﻿namespace SWMS.Models;
+﻿// UserAccount.cs
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-public class UserAccount
+namespace SWMS.Models
 {
-    public int Id { get; set; }            
-    public string Name { get; set; }
-    public string Email { get; set; } = "";
-    public string PasswordHash { get; set; } = "";
-    public DateTime CreatedAt { get; set; }
+    public class UserAccount
+    {
+        [Key]
+        public int Id { get; set; }
 
+        [Required, EmailAddress, MaxLength(255)]
+        public required string Email { get; set; }
 
-    public List<Report> Reports { get; set; } = new List<Report>();
+        [Required, MaxLength(255)]
+        public required string PasswordHash { get; set; }
+
+        [Required, MaxLength(100)]
+        public required string UserName { get; set; }
+
+        public ICollection<Report> Reports { get; set; } = new List<Report>();
+    }
 }

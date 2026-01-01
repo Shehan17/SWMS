@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// AppDbContext.cs
+using Microsoft.EntityFrameworkCore;
 using SWMS.Models;
 
 namespace SWMS.Data;
@@ -13,11 +14,10 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // Configure one-to-many relationship
         modelBuilder.Entity<Report>()
             .HasOne(r => r.UserAccount)
-            .WithMany(u => u.Reports)
+            .WithMany(u => u.Reports) 
             .HasForeignKey(r => r.UserAccountId)
-            .OnDelete(DeleteBehavior.Cascade); // optional
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

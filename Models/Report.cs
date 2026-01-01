@@ -1,15 +1,28 @@
-﻿namespace SWMS.Models;
+﻿// Report.cs
+using System;
+using System.ComponentModel.DataAnnotations;
 
-public class Report
+namespace SWMS.Models
 {
-    public int ReportId { get; set; }          
-    public string WasteType { get; set; } = ""; 
-    public string Description { get; set; } = "";
+    public class Report
+    {
+        [Key]
+        public int ReportId { get; set; }
 
-    public double? Latitude { get; set; }      
-    public double? Longitude { get; set; }    
+        [Required, MaxLength(100)]
+        public required string WasteType { get; set; }
 
-   
-    public int UserAccountId { get; set; }
-    public UserAccount? UserAccount { get; set; } 
+        [MaxLength(500)]
+        public string? Description { get; set; }
+
+        public double? Latitude { get; set; }
+        public double? Longitude { get; set; }
+
+        [Required]
+        public int UserAccountId { get; set; }
+
+        public UserAccount? UserAccount { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    }
 }
