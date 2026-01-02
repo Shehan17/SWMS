@@ -8,23 +8,27 @@
     <h2 class="text_center fw-bold text-uppercase text-bg-dark text-white">Submit Your Trash</h2>
 </div>
 
+<form method="post">
+
+
+
 <div class="row mt-5 align-items-center">
-    <label for="location" class="col-1 col-form-label fw-bold">
+    <label  class="col-1 col-form-label fw-bold">
         Location:
     </label>
 
     <div class="col-10 shadow-sm submit_field">
-        <input type="text" id="location" class="form-control">
+        <input asp-for="location"  type="text" id="location" class="form-control">
     </div>
 </div>
 
 <div class="row mt-3 align-items-center">
-    <label for="wasteType" class="col-auto col-form-label fw-bold">
+    <label  class="col-auto col-form-label fw-bold">
         Waste Type:
     </label>
 
     <div class="col-10 shadow-sm submit_field">
-        <select id="wasteType" class="form-select">
+        <select asp-for="wasteType"  id="wasteType" class="form-select">
             <option selected disabled>Select</option>
             <option>Plastic</option>
             <option>Organic</option>
@@ -34,12 +38,12 @@
 </div>
 
 <div class="row mt-3 align-items-center">
-    <label for="description" class="col-auto col-form-label fw-bold">
+    <label  class="col-auto col-form-label fw-bold">
         Description:
     </label>
 
     <div class="col-10 shadow-sm submit_field ">
-        <textarea id="description" class="form-control" rows="4" placeholder="Add a description"></textarea>
+        <textarea asp-for="description"  id="description" class="form-control" rows="4" placeholder="Add a description"></textarea>
     </div>
 </div>
 
@@ -48,5 +52,5 @@
        Submit
     </button>
 </div>
-
+</form>
 
