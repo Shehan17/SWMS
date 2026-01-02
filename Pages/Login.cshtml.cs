@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SWMS.Data;
@@ -70,6 +70,9 @@ namespace SWMS.Pages
                 LoginError = "Invalid email or password";
                 return Page();
             }
+
+            HttpContext.Session.SetInt32("UserId", user.Id);
+            HttpContext.Session.SetString("UserName", user.UserName);
 
             return RedirectToPage("/Index");
         }
